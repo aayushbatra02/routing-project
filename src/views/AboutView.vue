@@ -1,5 +1,8 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div
+    class="flex justify-center mt-8 text-xl md:text-2xl lg:text-3xl font-bold"
+  >
+    About
   </div>
 </template>
+  
