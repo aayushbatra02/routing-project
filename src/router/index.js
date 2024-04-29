@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import NotFound from "@/views/NotFound.vue"; // Import the NotFound component directly
+import NotFound from "@/views/NotFound.vue"; 
 
 
 const routes = [
