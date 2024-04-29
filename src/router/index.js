@@ -1,5 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
+import NotFound from "@/views/NotFound.vue"; // Import the NotFound component directly
+
+
 const routes = [
   {
     path: "/",
@@ -30,12 +33,12 @@ const routes = [
   {
     path: "/:pathMatch(.*)*",
     name: "notFound",
-    component: import("@/views/NotFound.vue"),
+    component: NotFound,
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes,
 });
 
