@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <navBar />
-    <div class="flex flex-col items-center mt-8">
+   <div class="flex flex-col items-center mt-8">
       <div class="flex justify-center text-xl md:text-2xl lg:text-3xl font-bold mb-4">Jobs</div>
       <div
         class="bg-gray-200 mb-2 lg:mb-3 w-[60%] md:w-[40%] xl:w-[30%] text-center py-2 rounded cursor-pointer text-xl md:text-2xl lg:text-[1.35rem]:text-3xl"
@@ -12,14 +10,11 @@
         {{ job.title }}
       </div>
     </div>
-  </div>
 </template>
   
 <script>
-import jobsData from "../data/jobsData.json";
-import NavBar from "../components/NavBar.vue";
+import jobsData from "../json/jobsData.json";
 export default {
-  components: { NavBar },
   data() {
     return {
       jobs: jobsData,
@@ -27,7 +22,7 @@ export default {
   },
   methods: {
     goToDetails(id) {
-      this.$router.push({ name: "jobDetail", params: { jobId: id } });
+      this.$router.push(`jobs/${id}`);
     },
   },
 };
