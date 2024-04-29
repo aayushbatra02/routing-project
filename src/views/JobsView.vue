@@ -2,9 +2,9 @@
   <div>
     <navBar />
     <div class="flex flex-col items-center mt-8">
-      <div class="text-xl font-bold mb-4">Jobs</div>
+      <div class="flex justify-center text-xl md:text-2xl lg:text-3xl font-bold mb-4">Jobs</div>
       <div
-        class="bg-gray-200 mb-2 w-[40%] text-center py-2 rounded font-semibold cursor-pointer"
+        class="bg-gray-200 mb-2 lg:mb-4 w-[60%] md:w-[40%] xl:w-[30%] text-center py-2 rounded cursor-pointer text-xl md:text-2xl lg:text-3xl"
         v-for="job in jobs"
         :key="job.id"
         @click="goToDetails(job.id)"

@@ -2,14 +2,14 @@
   <div>
     <navBar />
     <div
-      class="flex flex-col mt-8 gap-2 w-max m-auto border-2 border-black p-4 rounded"
+      class="flex flex-col mt-8 gap-2 lg:gap-4 w-max m-auto border-2 border-black p-4 lg:p-6 rounded sm:text-lg lg:text-2xl"
     >
       <div class="flex flex-row">
-        <div class="w-20 font-bold">Job Id</div>
+        <div class="w-[8rem] lg:w-[10rem] font-bold">Job Id</div>
         <div class="text-blue-900 font-bold">{{ jobId }}</div>
       </div>
       <div class="flex flex-row">
-        <div class="w-20 font-bold">Job Title</div>
+        <div class="w-[8rem] lg:w-[10rem] font-bold">Job Title</div>
         <div class="text-blue-900 font-bold">{{ job.title }}</div>
       </div>
     </div>
