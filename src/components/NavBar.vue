@@ -5,11 +5,7 @@
       :key="id"
       :to="item.path"
       class="cursor-pointer capitalize px-3"
-      :class="[
-        id === 0 && $route.path === '/jobs' ? 'border-r border-black' : null,
-        id === 1 && $route.path === '/' ? 'border-r border-black' : null,
-      ]"
-      activeClass="bg-red-500 text-white py-1 rounded font-bold border-none"
+      activeClass="bg-red-500 text-white py-1 rounded font-bold"
     >
       {{ item.name }}
     </RouterLink>
