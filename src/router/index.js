@@ -1,35 +1,36 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-const HomeView = () => import("../views/HomeView.vue");
-const AboutView = () => import("../views/AboutView.vue");
-const JobsView = () => import("../views/JobsView.vue");
-const JobDetailView = () => import("../views/JobDetailView.vue");
-const notFound = () => import("@/views/NotFound.vue");
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: () => import("@/views/HomeView.vue"),
   },
   {
     path: "/about",
     name: "about",
-    component: AboutView,
+    component: () => import("@/views/AboutView.vue"),
   },
   {
     path: "/jobs",
     name: "jobs",
-    component: JobsView,
-  },
-  {
-    path: "/jobs/:jobId",
-    name: "jobDetail",
-    component: JobDetailView,
+    children: [
+      {
+        path: "",
+        name: "jobs",
+        component: () => import("@/views/JobsView.vue"),
+      },
+      {
+        path: ":jobId",
+        name: "jobDetail",
+        component: () => import("@/views/JobDetailView.vue"),
+      },
+    ],
   },
   {
     path: "/:pathMatch(.*)*",
     name: "notFound",
-    component: notFound,
+    component: import("@/views/NotFound.vue"),
   },
 ];
 
